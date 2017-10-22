@@ -208,18 +208,50 @@
 
    "pagamentos": [{
     "nomeBarco": "Burt Bear",
-    "valoPagamento": "1500",
+    "valorPagamento": "1500",
     "dataPagamento": "10/11/2017",
     "id": "1"
   }, {
     "nomeBarco": "Boat Fast",
-    "valoPagamento": "670",
+    "valorPagamento": "670",
     "dataPagamento": "15/01/2017",
     "id": "2"
   },{
     "nomeBarco": "Super Lancha",
-    "valoPagamento": "2600",
+    "valorPagamento": "2600",
     "dataPagamento": "12/12/2017",
+    "id": "3"
+  }],
+
+   "barcos": [{
+    "nome": "Burt Bear",
+    "fotoBarco": "assets/img/speakers/bear.jpg",
+    "cor": "Preto",
+    "motor": "Ferrari",
+    "autonomia": "100",
+    "velocidade": "220",
+    "tipoCasco": "vidro",
+    "comprimento": "120",
+    "id": "1"
+  }, {
+    "nome": "Boat Fast",
+    "fotoBarco": "assets/img/speakers/cheetah.jpg",
+    "cor": "Azul",
+    "motor": "Ferrari",
+    "autonomia": "80",
+    "velocidade": "330",
+    "tipoCasco": "plastico",
+    "comprimento": "120",
+    "id": "2"
+  },{
+    "nome": "Canoa",
+    "fotoBarco": "assets/img/speakers/cheetah.jpg",
+    "cor": "Cinza",
+    "motor": "BMW",
+    "autonomia": "210",
+    "velocidade": "120",
+    "tipoCasco": "fibra de carbono",
+    "comprimento": "56",
     "id": "3"
   }],
 

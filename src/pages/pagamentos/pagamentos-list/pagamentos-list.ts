@@ -1,9 +1,7 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, List } from 'ionic-angular';
 
 import { ConferenceData } from '../../../providers/conference-data';
-import { UserData } from '../../../providers/user-data';
-
 
 @IonicPage()
 @Component({
@@ -12,9 +10,27 @@ import { UserData } from '../../../providers/user-data';
 })
 export class PagamentosListPage {
 
+  pagamentos: any[] = [];
+
+  @ViewChild('pagamentoList', { read: List }) pagamentoList: List;
+
   constructor(public navCtrl: NavController, 
-              public navParams: NavParams) {
+              public navParams: NavParams,
+              public confData: ConferenceData) {
+
+      this.listarPagamentos();          
   }
+
+  public listarPagamentos(){
+
+     console.log('PagamentosListPage :: listarPagamentos '); 
+
+      this.confData.getPagamentos().subscribe((pagamentos: any[]) => { 
+        this.pagamentos = pagamentos;
+        console.log('PagamentosListPage :: listarPagamentos :: resultado', this.pagamentos);
+      });
+  }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PagamentosListPage');

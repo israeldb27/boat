@@ -1,3 +1,21 @@
 page-conta-detail {
 
+    /* CSS used here will be applied after bootstrap.css */
+body {
+  background-color: #eaeaea;
+}
+
+img.avatar {
+  border: 1px solid #eee;
+}
+
+.only-bottom-margin {
+  margin-top: 0px;
+}
+
+.activity-mini {
+  padding-right: 15px;
+  float: left;
+}
+
 }

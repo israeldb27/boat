@@ -152,4 +152,16 @@ export class ConferenceData {
     });
   }
 
+  getPagamentos() {
+    return this.load().map((data: any) => {
+      return data.pagamentos.sort();
+    });
+  }
+
+   getMeusBarcos() {
+    return this.load().map((data: any) => {
+      return data.barcos.sort();
+    });
+  }
+
 }
