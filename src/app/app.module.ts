@@ -35,6 +35,7 @@ import { ReservasSolicitadasPage } from '../pages/reservas/reservas-solicitadas/
 import { BarcosMeusPage } from '../pages/barcos/barcos-meus/barcos-meus';
 import { BarcosPesquisaPage } from '../pages/barcos/barcos-pesquisa/barcos-pesquisa';
 import { BarcosPresentFilterPage } from '../pages/barcos/barcos-present-filter/barcos-present-filter';
+import { BarcosResultadoPesquisaPage } from '../pages/barcos/barcos-resultado-pesquisa/barcos-resultado-pesquisa';
 
 import { ContaDetailPage } from '../pages/conta/conta-detail/conta-detail';
 import { SobreDetailPage } from '../pages/sobre/sobre-detail/sobre-detail';
@@ -71,7 +72,8 @@ import { UserData } from '../providers/user-data';
     ReservasPlanejamentoPage,
     PagamentosMeusPage,
     BarcosPesquisaPage,
-    BarcosPresentFilterPage
+    BarcosPresentFilterPage,
+    BarcosResultadoPesquisaPage
   ],
   imports: [
     BrowserModule,
@@ -100,7 +102,8 @@ import { UserData } from '../providers/user-data';
         { component: ReservasPlanejamentoPage, name: 'ReservasPlanejamentoPage', segment: 'reservas-planejamento' } ,
         { component: PagamentosMeusPage, name: 'PagamentosMeusPage', segment: 'pagamentos-meus' },         
         { component: BarcosPesquisaPage, name: 'BarcosPesquisaPage', segment: 'barcos-pesquisa' } ,
-        { component: BarcosPresentFilterPage, name: 'BarcosPresentFilterPage', segment: 'barcos-filter' }         
+        { component: BarcosPresentFilterPage, name: 'BarcosPresentFilterPage', segment: 'barcos-filter' },
+        { component: BarcosResultadoPesquisaPage, name: 'BarcosResultadoPesquisaPage', segment: 'barcos-resultado-pesquisa' }        
       ]
     }),
     IonicStorageModule.forRoot()
@@ -131,7 +134,8 @@ import { UserData } from '../providers/user-data';
     ReservasPlanejamentoPage,
     PagamentosMeusPage,
     BarcosPesquisaPage,
-    BarcosPresentFilterPage
+    BarcosPresentFilterPage,
+    BarcosResultadoPesquisaPage
   ],
   providers: [
     { provide: ErrorHandler, useClass: IonicErrorHandler },

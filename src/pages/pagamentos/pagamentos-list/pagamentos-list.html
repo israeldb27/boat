@@ -7,24 +7,42 @@
 
 </ion-header>
 
-<ion-content>
-  <ion-refresher (ionRefresh)="doRefresh($event)">
-    <ion-refresher-content></ion-refresher-content>
-  </ion-refresher>
 
-  <ion-list #pagamentoList >
-
-    <ion-item-group *ngFor="let pagamento of pagamentos" >
-        <button ion-item (click)="goToSessionDetail(session)">
-          <h3>Barco: {{pagamento.nomeBarco}}</h3>
-          <p> Valor Pagamento: {{pagamento.valorPagamento}} </p>
-          <p> Data Pagamento: {{pagamento.dataPagamento}} </p>
-        </button>
-    <hr>
-
-    </ion-item-group>
-
-  </ion-list>
+  <ion-content class="cards-bg social-cards">  
+      
+          <ion-card>
+              
+              <ion-list>
+                  <ion-item *ngFor="let pagamento of pagamentos" (click)="goToSessionDetail(session)">
+                      <ion-thumbnail item-start>
+                          <img [src]="" >     
+                      </ion-thumbnail>
+                      
+      
+                      <ion-card-content>
+                          <p><strong>Data Pagamento: </strong>{{pagamento.dataPagamento}} </p>
+                          <p><strong>Valor Pagamento: </strong>{{pagamento.valorPagamento}}</p>                    
+                       </ion-card-content>
+              
+                      <ion-row no-padding>
+                          <ion-col>
+                            <button ion-button clear small color="danger" icon-start>
+                              <ion-icon name='star'></ion-icon>
+                              Detalhes
+                            </button>
+                          </ion-col>
+                          <ion-col text-center>
+                            <button ion-button clear small color="danger" icon-start>
+                              <ion-icon name='musical-notes'></ion-icon>
+                              Usuario
+                            </button>
+                          </ion-col>                          
+                        </ion-row>
+                        <hr>
+                      </ion-item>
+                      
+              </ion-list>
+          </ion-card>
 
 
 </ion-content>

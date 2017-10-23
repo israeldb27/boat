@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angu
 import { FormGroup, AbstractControl, FormControl, FormBuilder, Validators } from '@angular/forms';
 
 import { BarcosPresentFilterPage } from '../barcos-present-filter/barcos-present-filter';
+import { BarcosResultadoPesquisaPage } from '../barcos-resultado-pesquisa/barcos-resultado-pesquisa';
 
 @IonicPage()
 @Component({
@@ -38,8 +39,9 @@ export class BarcosPesquisaPage {
     console.log('BarcosPesquisaPage :: pesquisarBarcos  :: dataInicio', this.dataInicio.value);
     console.log('BarcosPesquisaPage :: pesquisarBarcos  :: dataFim', this.dataFim.value);
 
-
     this.submitted = true;
+
+    this.navCtrl.push(BarcosResultadoPesquisaPage);
 
   }
 
