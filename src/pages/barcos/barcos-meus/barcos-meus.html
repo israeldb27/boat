@@ -1,56 +1,50 @@
 <ion-header>
-
   <ion-navbar>
     <ion-title>Meus Barcos</ion-title>
   </ion-navbar>
-
 </ion-header>
 
+<ion-content class="cards-bg">
 
-<ion-content padding>
+    <ion-card>
+        
+        <ion-list>
+            <ion-item *ngFor="let barco of meusBarcos" (click)="visualizarDetalhes(barco)">
+              
+                <img [src]="barco.fotoBarco" alt="Foto Barco">     
 
-    <ion-list>
-      <ion-item *ngFor="let barco of meusBarcos" (click)="visualizarDetalhes(barco)">{{barco.nome}} - {{barco.cor}}</ion-item>
-    </ion-list>
-
-</ion-content>
-
-<ion-content class="outer-content barco-list">
-  <ion-list [virtualScroll]="meusBarcos">
-    <ion-grid fixed>
-      <ion-row align-items-stretch>
-
-        <ion-col col-12 col-md-6 align-self-stretch align-self-center *virtualItem="let barco" approxItemHeight="457px">
-
-          <ion-card class="barco-card">
-            <ion-card-header>
-              <button ion-item detail-none (click)="goToSpeakerDetail(speaker)">
-                <ion-avatar item-start>
-                  <img [src]="barco.fotoBarco" alt="Foto Barco">
-                </ion-avatar>
-                {{barco.nome}}
-              </button>
-            </ion-card-header>
-
-            <ion-card-content class="outer-content">
-              <ion-list>             
-
-                <button ion-item (click)="goToSpeakerDetail(barco)">
-                  <table  >
-                      <tr>
-                          <td><strong>Cor: </strong>  </td> <td>{{barco.cor}} </td>
-                      </tr> 
-                      <tr>
-                          <td><strong> Motor: </strong> </td> <td>{{barco.motor}} </td>
-                      </tr> 
-                  </table>                 
-                </button>
-              </ion-list>
-            </ion-card-content>
-          </ion-card>
-
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-list>
-</ion-content>
+                <ion-card-content>
+                    <ion-card-title>
+                        {{barco.nome}}
+                    </ion-card-title>
+                    <p><strong>Cor: </strong>{{barco.cor}}</p>
+                    <p><strong>Motor: </strong>{{barco.motor}}</p>
+                 </ion-card-content>
+        
+                <ion-row no-padding>
+                    <ion-col>
+                      <button ion-button clear small color="danger" icon-start>
+                        <ion-icon name='star'></ion-icon>
+                        Detalhes
+                      </button>
+                    </ion-col>
+                    <ion-col text-center>
+                      <button ion-button clear small color="danger" icon-start>
+                        <ion-icon name='musical-notes'></ion-icon>
+                        Planejar Reserva
+                      </button>
+                    </ion-col>
+                    <ion-col text-right>
+                      <button ion-button clear small color="danger" icon-start>
+                        <ion-icon name='share-alt'></ion-icon>
+                        Share
+                      </button>
+                    </ion-col>
+                  </ion-row>
+                  <hr>
+                </ion-item>
+                
+        </ion-list>
+    </ion-card>
+    
+    </ion-content>
