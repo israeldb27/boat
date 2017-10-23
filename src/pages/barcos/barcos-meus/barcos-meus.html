@@ -33,13 +33,10 @@
             </ion-card-header>
 
             <ion-card-content class="outer-content">
-              <ion-list>
-                <button ion-item *ngFor="let session of barco.sessions" (click)="goToSessionDetail(session)">
-                  <h3>{{session.nome}}</h3>
-                </button>
+              <ion-list>             
 
                 <button ion-item (click)="goToSpeakerDetail(barco)">
-                  <table cellspacing="10" >
+                  <table  >
                       <tr>
                           <td><strong>Cor: </strong>  </td> <td>{{barco.cor}} </td>
                       </tr> 
